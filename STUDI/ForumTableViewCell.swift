@@ -9,10 +9,14 @@
 import UIKit
 
 class ForumTableViewCell: UITableViewCell {
-    @IBOutlet var label: UILabel!
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        nameLabel.font = UIFont.italicSystemFont(ofSize: nameLabel.font.pointSize)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

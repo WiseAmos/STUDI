@@ -11,8 +11,9 @@
 		9EDDD6BCC10E0BFA6D47E8C8 /* Pods_STUDIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */; };
 		A84D2F2EE4A9B1A677A04F10 /* Pods_STUDITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */; };
 		B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */; };
+		B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60223715BA500241DAE /* PostViewController.swift */; };
 		FD049A5623711EF10087B29C /* HelpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD049A5523711EF10087B29C /* HelpInfoViewController.swift */; };
-		FD0AA3E123706FDF00776293 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AA3E023706FDF00776293 /* PostViewController.swift */; };
+		FD0AA3E123706FDF00776293 /* PostSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */; };
 		FD1556B8236FD20900BD9192 /* PicturePen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1556B7236FD20800BD9192 /* PicturePen.png */; };
 		FD429863236A8AEC007D7469 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD429862236A8AEC007D7469 /* GoogleService-Info.plist */; };
 		FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C9B01236A7CEE00B6F77B /* AppDelegate.swift */; };
@@ -61,8 +62,9 @@
 		9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
+		B0F9A60223715BA500241DAE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FD049A5523711EF10087B29C /* HelpInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpInfoViewController.swift; sourceTree = "<group>"; };
-		FD0AA3E023706FDF00776293 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSegueViewController.swift; sourceTree = "<group>"; };
 		FD1556B7236FD20800BD9192 /* PicturePen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PicturePen.png; sourceTree = "<group>"; };
 		FD429862236A8AEC007D7469 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD5C9AFE236A7CEE00B6F77B /* STUDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,7 +205,7 @@
 			children = (
 				FD049A5523711EF10087B29C /* HelpInfoViewController.swift */,
 				FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */,
-				FD0AA3E023706FDF00776293 /* PostViewController.swift */,
+				FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */,
 				FD875B9D236F28C800103AA6 /* BeginViewController.swift */,
 				FD5C9B05236A7CEE00B6F77B /* SignUpViewController.swift */,
 				FD875BA1236F296300103AA6 /* LoginViewController.swift */,
@@ -211,6 +213,7 @@
 				FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */,
 				FDE21320236D3A46005B3B92 /* ProfileViewController.swift */,
 				FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */,
+				B0F9A60223715BA500241DAE /* PostViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -465,11 +468,12 @@
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
 				FD049A5623711EF10087B29C /* HelpInfoViewController.swift in Sources */,
 				FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */,
+				B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */,
 				B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */,
 				FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */,
 				FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */,
 				FD5C9B04236A7CEE00B6F77B /* SceneDelegate.swift in Sources */,
-				FD0AA3E123706FDF00776293 /* PostViewController.swift in Sources */,
+				FD0AA3E123706FDF00776293 /* PostSegueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
