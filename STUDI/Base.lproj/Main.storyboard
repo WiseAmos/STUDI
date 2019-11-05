@@ -293,7 +293,7 @@
         <!--Profile-->
         <scene sceneID="SQz-fY-RGL">
             <objects>
-                <viewController id="8hz-Rd-amf" sceneMemberID="viewController">
+                <viewController id="8hz-Rd-amf" customClass="ProfileViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LfF-We-PKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,12 +303,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Change your name"/>
+                                <connections>
+                                    <action selector="changeNameButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="teZ-xd-Vjy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19L-ml-TXP">
                                 <rect key="frame" x="0.0" y="285" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Change your password"/>
+                                <connections>
+                                    <action selector="changePasswordButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="T4j-Ks-pRz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Wp-yND">
                                 <rect key="frame" x="-1" y="354" width="414" height="61"/>
@@ -316,6 +322,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
+                                    <action selector="logoutButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="qjN-f5-Bvm"/>
                                     <segue destination="gdj-iL-gaj" kind="unwind" unwindAction="cancelDatabasing:" id="mm4-P8-Ttm"/>
                                 </connections>
                             </button>
