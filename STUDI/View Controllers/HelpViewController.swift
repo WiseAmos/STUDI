@@ -43,7 +43,7 @@ class HelpViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "helpCell", for: indexPath)
         
         cell.textLabel?.text = "\(HelpTitles[indexPath.row])"
-        cell.detailTextLabel?.text = "Click for more info"
+        cell.detailTextLabel?.text = ""
         
         return cell
       }
