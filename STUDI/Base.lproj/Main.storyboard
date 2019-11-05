@@ -240,28 +240,58 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Forum" id="pFX-Gn-J9g"/>
                     <connections>
-                        <segue destination="9U1-Kw-KI5" kind="show" identifier="showDetail" id="5XT-g8-SqA"/>
+                        <segue destination="8zu-q5-8CY" kind="presentation" identifier="extraDetail" id="wev-D5-Y9K"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBr-G3-QkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2798.5507246376815" y="-552.45535714285711"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vtC-ID-xp7">
+        <!--Anwers-->
+        <scene sceneID="9Eh-8P-TxR">
             <objects>
-                <viewController id="9U1-Kw-KI5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9EZ-1g-ct7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tableViewController id="8zu-q5-8CY" customClass="AnswerViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ple-IZ-IkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="rlx-el-R6b"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="puS-2r-pl3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlz-B3-kdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="3yJ-wG-izm">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-ni-oMi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="31"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MIR-vu-C2S">
+                                <rect key="frame" x="0.0" y="295" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIR-vu-C2S" id="xNU-RQ-jCm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8zu-q5-8CY" id="7un-22-fXa"/>
+                            <outlet property="delegate" destination="8zu-q5-8CY" id="kgs-em-nBa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Anwers" id="caU-vB-CQq"/>
+                    <connections>
+                        <outlet property="answerlabel" destination="YNJ-ni-oMi" id="m0J-lv-uB0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqD-YO-dEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="-552"/>
+            <point key="canvasLocation" x="-181" y="-552"/>
         </scene>
         <!--Post -->
         <scene sceneID="vPd-U0-XXW">
@@ -560,6 +590,6 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xwN-Bo-KCG"/>
+        <segue reference="7aK-P6-2Is"/>
     </inferredMetricsTieBreakers>
 </document>

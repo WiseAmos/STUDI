@@ -18,6 +18,19 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     func setGradientBackground() {
+        
+        performSegue(withIdentifier: "answers", sender: nil)
+       
+        
+ 
+
+        
+        
+        
+        
+        
+        
+        
         let colorTop =  UIColor(red: 255.0/255.0, green: 149.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
         let colorBottom = UIColor(red: 255.0/255.0, green: 94.0/255.0, blue: 58.0/255.0, alpha: 1.0).cgColor
 
@@ -28,8 +41,8 @@ class LoginViewController: UIViewController {
 
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
-  
     
+
     override func viewDidLoad() {
         
         let bottomLine = CALayer()

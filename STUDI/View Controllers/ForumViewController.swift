@@ -13,6 +13,7 @@ class ForumViewController: UITableViewController {
 
     var ref: DatabaseReference!
     var questions: [String]! = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -75,7 +76,8 @@ class ForumViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        performSegue(withIdentifier: "extraDetail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {
@@ -118,14 +120,17 @@ class ForumViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! AnswerViewController
+        if segue.identifier == "extraDetail", let indexPath = tableView.indexPathForSelectedRow {
+            dest.Question = questions[indexPath.row]
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
