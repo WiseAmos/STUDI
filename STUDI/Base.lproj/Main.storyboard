@@ -252,7 +252,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBr-G3-QkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="-542"/>
+            <point key="canvasLocation" x="3496" y="-607"/>
         </scene>
         <!--Answerspost View Controller-->
         <scene sceneID="Hfl-rh-7TI">
@@ -436,7 +436,7 @@
                         <segue destination="sv3-im-AH2" kind="relationship" relationship="viewControllers" id="pIk-eV-9Bq"/>
                         <segue destination="Fyk-Jm-7aR" kind="relationship" relationship="viewControllers" id="Hu6-PE-oeS"/>
                         <segue destination="E9a-y0-cnM" kind="relationship" relationship="viewControllers" id="BBa-Fw-fw2"/>
-                        <segue destination="8hz-Rd-amf" kind="relationship" relationship="viewControllers" id="2uD-XY-aiB"/>
+                        <segue destination="ADi-dH-Xsk" kind="relationship" relationship="viewControllers" id="Og3-8s-6CP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9na-qQ-B0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -445,50 +445,39 @@
             <point key="canvasLocation" x="3584" y="130"/>
         </scene>
         <!--Profile-->
-        <scene sceneID="SQz-fY-RGL">
+        <scene sceneID="scK-eR-d6R">
             <objects>
-                <viewController id="8hz-Rd-amf" customClass="ProfileViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LfF-We-PKd">
+                <viewController id="ADi-dH-Xsk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ck5-kj-y4D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-e3-FK8">
-                                <rect key="frame" x="56" y="308" width="300" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-R6-Td3">
+                                <rect key="frame" x="81" y="451" width="253" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Change your username">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <action selector="changeNameButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="teZ-xd-Vjy"/>
-                                    <segue destination="WUq-hd-NeJ" kind="presentation" id="kb3-nz-Gnf"/>
+                                    <segue destination="xyI-rc-SIg" kind="unwind" unwindAction="unwindToHome:" id="m6l-Dl-6WL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Wp-yND">
-                                <rect key="frame" x="56" y="553" width="299" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-pM-Asi">
+                                <rect key="frame" x="81" y="231" width="253" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <state key="normal" title="Change your username"/>
                                 <connections>
-                                    <action selector="logoutButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="qjN-f5-Bvm"/>
-                                    <segue destination="gdj-iL-gaj" kind="unwind" unwindAction="cancelDatabasing:" id="mm4-P8-Ttm"/>
+                                    <segue destination="WUq-hd-NeJ" kind="presentation" id="pDY-OL-2nx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Yqo-VC-Ehc"/>
+                        <viewLayoutGuide key="safeArea" id="Udu-Od-c8y"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="t2V-kV-p6c"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="UrH-Hw-0BZ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TMx-8b-YAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="gdj-iL-gaj" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2u-w8-xDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xyI-rc-SIg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4607.2463768115949" y="129.91071428571428"/>
+            <point key="canvasLocation" x="4592.753623188406" y="130.58035714285714"/>
         </scene>
         <!--usernamechange-->
         <scene sceneID="ORi-OR-Jyz">

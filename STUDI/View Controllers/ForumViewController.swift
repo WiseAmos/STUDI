@@ -33,7 +33,7 @@ class ForumViewController: UITableViewController {
         ref = Database.database().reference()
         
         ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
-          // Get user value
+          // Get user valueb
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
             for dic in arr {
