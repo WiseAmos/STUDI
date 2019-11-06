@@ -34,19 +34,6 @@ class ForumViewController: UITableViewController {
         
         ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
-            for child in snapshot.children {
-                if let childsnapshot = child as? DataSnapshot,
-                    let dicts = childsnapshot as? [String:Any],
-                    let username = dicts["username"] as? [String:Any]
-                {
-                   print("username")
-                    
-                }
-                else {
-                    print ("notworking")
-                }
-                
-            }
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
             for dic in arr {
