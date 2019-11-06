@@ -29,9 +29,9 @@
 		FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A07AF236F3C6100E5E778 /* Utilities.swift */; };
 		FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875B9D236F28C800103AA6 /* BeginViewController.swift */; };
 		FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875BA1236F296300103AA6 /* LoginViewController.swift */; };
+		FD8ACC432372B7110046C84A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8ACC422372B7110046C84A /* ProfileViewController.swift */; };
 		FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */; };
 		FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */; };
-		FDE21321236D3A46005B3B92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21320236D3A46005B3B92 /* ProfileViewController.swift */; };
 		FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */; };
 		FDE21325236D3A9F005B3B92 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21324236D3A9F005B3B92 /* HelpViewController.swift */; };
 		FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */; };
@@ -89,9 +89,9 @@
 		FD7A07AF236F3C6100E5E778 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FD875B9D236F28C800103AA6 /* BeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginViewController.swift; sourceTree = "<group>"; };
 		FD875BA1236F296300103AA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD8ACC422372B7110046C84A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../../Creative Cloud Files/ProfileViewController.swift"; sourceTree = "<group>"; };
 		FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHelpViewController.swift; sourceTree = "<group>"; };
 		FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
-		FDE21320236D3A46005B3B92 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		FDE21324236D3A9F005B3B92 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +208,7 @@
 		FD875B9C236F279B00103AA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD8ACC422372B7110046C84A /* ProfileViewController.swift */,
 				B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */,
 				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
 				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
@@ -219,7 +220,6 @@
 				FD5C9B05236A7CEE00B6F77B /* SignUpViewController.swift */,
 				FD875BA1236F296300103AA6 /* LoginViewController.swift */,
 				FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */,
-				FDE21320236D3A46005B3B92 /* ProfileViewController.swift */,
 				FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */,
 				B0F9A60223715BA500241DAE /* PostViewController.swift */,
 				B0F9A60C237171C300241DAE /* AnswerViewController.swift */,
@@ -311,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */;
+			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -474,8 +474,8 @@
 				FDE21325236D3A9F005B3B92 /* HelpViewController.swift in Sources */,
 				FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */,
 				FD5C9B06236A7CEE00B6F77B /* SignUpViewController.swift in Sources */,
+				FD8ACC432372B7110046C84A /* ProfileViewController.swift in Sources */,
 				B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */,
-				FDE21321236D3A46005B3B92 /* ProfileViewController.swift in Sources */,
 				B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */,
 				FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */,
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
@@ -777,7 +777,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */ = {
+		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD5C9B26236A7CF300B6F77B /* Debug */,

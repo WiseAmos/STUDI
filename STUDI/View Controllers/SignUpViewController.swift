@@ -22,7 +22,10 @@ import GoogleSignIn
        
        @IBOutlet weak var usernameTextField: UITextField!
     
-       func setGradientBackground() {
+    @IBOutlet weak var errorMessage: UILabel!
+    
+    @IBOutlet weak var confirmField: UITextField!
+    func setGradientBackground() {
            
            let colorTop =  UIColor(red: 210/255.0, green: 109/255.0, blue: 180/255.0, alpha: 1.0).cgColor
            let colorBottom = UIColor(red: 55/255.0, green: 148/255.0, blue: 228/255.0, alpha: 1.0).cgColor
@@ -35,6 +38,8 @@ import GoogleSignIn
            self.view.layer.insertSublayer(gradientLayer, at:0)
        }
     
+    
+    
        override func viewDidLoad() {
       signUpButton.layer.borderWidth = 4.5
      signUpButton.layer.borderColor = UIColor.white.cgColor
@@ -42,7 +47,7 @@ import GoogleSignIn
       signUpButton.tintColor = UIColor.white
            
            let bottomLine = CALayer()
-             
+        errorMessage.alpha = 0
            bottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height - 2, width: passwordTextField.frame.width, height: 3)
            bottomLine.backgroundColor = UIColor.white.cgColor
                passwordTextField.borderStyle = .none
@@ -62,6 +67,14 @@ import GoogleSignIn
               bottomLine3.backgroundColor = UIColor.white.cgColor
             usernameTextField.borderStyle = .none
            usernameTextField.layer.addSublayer(bottomLine3)
+        
+        
+                  let bottomLine4 = CALayer()
+                    
+                  bottomLine4.frame = CGRect(x: 0, y: confirmField.frame.height - 2, width: confirmField.frame.width, height: 3)
+                     bottomLine4.backgroundColor = UIColor.white.cgColor
+                   confirmField.borderStyle = .none
+                   confirmField.layer.addSublayer(bottomLine4)
            
            
            setGradientBackground()
@@ -83,33 +96,32 @@ import GoogleSignIn
     
            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
                if (error != nil) {
-                   print(error);
-               } else {
-                   if  self.usernameTextField.text == "" {
-                       var alert = UIAlertController(title: "Alert", message:
-                           "Please fill in your username, thanks", preferredStyle: UIAlertController.Style.alert)
+                
+                if self.passwordTextField.text!.count <= 6 {
+                    self.errorMessage.alpha = 1
+                    self.errorMessage.text = "Seems that your password is too short. Your password should be longer than 6 letters"
+                }
+                
+                else if self.usernameTextField.text == "" || self.emailTextField.text == "" || self.passwordTextField.text == "" {
+                    self.errorMessage.alpha = 1
+                    self.errorMessage.text = "Please fill in all fields"
+                }
+                
+                else if self.confirmField.text != self.passwordTextField.text {
+                    self.errorMessage.alpha = 1
+                    self.errorMessage.text = "Passwords do not match"
+                }
+                
+                else {
+                self.errorMessage.alpha = 1
+                self.errorMessage.text = "Please ensure all fields are filled in correctly"
+    
+                }
+                
+               }
+               
+               else {
 
-                       self.present(alert, animated: false, completion: nil)
-
-                       alert.addAction(UIAlertAction(title: "Okie", style: UIAlertAction.Style.default,
-                             handler: nil))
-                          // CODE
-                   }
-                   
-                   else{
-                       if self.emailTextField.text == "" {
-                               var alert = UIAlertController(title: "Alert", message:
-                                   "Please fill in your email, thanks", preferredStyle: UIAlertController.Style.alert)
-
-                               self.present(alert, animated: false, completion: nil)
-
-                               alert.addAction(UIAlertAction(title: "Okie", style: UIAlertAction.Style.default,
-                                     handler: nil))
-                                  // CODE
-                           }
-                       else {
-                           
-                                       print("working")
                            UserDefaults.standard.set(self.usernameTextField.text, forKey: "name")
                                                self.performSegue(withIdentifier: "signUpDone", sender: nil)
                        }
@@ -132,10 +144,7 @@ import GoogleSignIn
            
            
            
-           
-           
-       }
-   }
+
 
 
 

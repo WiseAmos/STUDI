@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var errorMessage: UILabel!
     
     func setGradientBackground() {
             
@@ -40,8 +41,8 @@ class LoginViewController: UIViewController {
             loginButton.layer.borderColor = UIColor.white.cgColor
             loginButton.layer.cornerRadius = 35
             loginButton.tintColor = UIColor.white
-            
-            
+            errorMessage.alpha = 0
+            errorMessage.text = "e"
             
             
             
@@ -86,10 +87,14 @@ class LoginViewController: UIViewController {
                 guard let strongSelf = self else { return }
                 if (error != nil) {
                     
-                    //Send Alert
-                } else {
-                    strongSelf.performSegue(withIdentifier: "Logindone", sender: nil)
+                    self!.errorMessage.text = "Please ensure you have entered your information correctly"
                     
+                } else {
+                    if self!.usernameTextField.text == ""{
+                        self!.errorMessage.alpha = 1
+                        self!.errorMessage.text = "Please fill in all fields"
+                    } else { strongSelf.performSegue(withIdentifier: "Logindone", sender: nil)
+                    }
                 }
             }
         }
