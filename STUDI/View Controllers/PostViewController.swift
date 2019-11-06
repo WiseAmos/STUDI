@@ -76,11 +76,21 @@ class PostViewController: UIViewController, UITextViewDelegate {
         view.endEditing(true)
     }
     
+
+    
+    
+    
     @IBAction func post(_ sender: UIButton) {
+        
+        
+        let name = UserDefaults.standard.string(forKey: "name") 
+        
+         
         let postRef = Database.database().reference().child("post").childByAutoId()
         
         let postObject = [
             "text" : textView.text as Any,
+            "username" : name as Any
         ] as [String:Any]
         
         postRef.setValue (postObject, withCompletionBlock: { error, ref in

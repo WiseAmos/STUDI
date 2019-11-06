@@ -10,7 +10,11 @@ import UIKit
 
 class PostSegueViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
+        
         performSegue(withIdentifier: "showPost", sender: self)
+        
         tabBarController?.selectedIndex = 0
     }
 }
+
+
