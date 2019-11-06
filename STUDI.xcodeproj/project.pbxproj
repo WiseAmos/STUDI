@@ -28,6 +28,7 @@
 		FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A07AF236F3C6100E5E778 /* Utilities.swift */; };
 		FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875B9D236F28C800103AA6 /* BeginViewController.swift */; };
 		FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875BA1236F296300103AA6 /* LoginViewController.swift */; };
+		FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */; };
 		FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */; };
 		FDE21321236D3A46005B3B92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21320236D3A46005B3B92 /* ProfileViewController.swift */; };
 		FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */; };
@@ -86,6 +87,7 @@
 		FD7A07AF236F3C6100E5E778 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FD875B9D236F28C800103AA6 /* BeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginViewController.swift; sourceTree = "<group>"; };
 		FD875BA1236F296300103AA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHelpViewController.swift; sourceTree = "<group>"; };
 		FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		FDE21320236D3A46005B3B92 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -205,13 +207,13 @@
 		FD875B9C236F279B00103AA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD049A5523711EF10087B29C /* HelpInfoViewController.swift */,
+				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
+				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
 				FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */,
 				FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */,
 				FD875B9D236F28C800103AA6 /* BeginViewController.swift */,
 				FD5C9B05236A7CEE00B6F77B /* SignUpViewController.swift */,
 				FD875BA1236F296300103AA6 /* LoginViewController.swift */,
-				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
 				FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */,
 				FDE21320236D3A46005B3B92 /* ProfileViewController.swift */,
 				FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */,
@@ -462,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */,
 				FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */,
 				FDE21325236D3A9F005B3B92 /* HelpViewController.swift in Sources */,
 				FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */,
@@ -470,7 +473,6 @@
 				FDE21321236D3A46005B3B92 /* ProfileViewController.swift in Sources */,
 				FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */,
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
-				FD049A5623711EF10087B29C /* HelpInfoViewController.swift in Sources */,
 				FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */,
 				B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */,
 				B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */,
