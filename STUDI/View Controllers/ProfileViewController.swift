@@ -22,11 +22,14 @@ class ProfileViewController: UITableViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     @IBAction func changeNameButton(_ sender: Any) {
+ 
     }
+
     @IBAction func changePasswordButton(_ sender: Any) {
     }
     @IBAction func logoutButton(_ sender: Any) {
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground()
@@ -43,7 +46,7 @@ class ProfileViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-
+  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0

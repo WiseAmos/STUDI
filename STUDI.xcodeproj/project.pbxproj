@@ -10,10 +10,10 @@
 		36B2D431FC50F0292584EE8D /* Pods_STUDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0C2BBA0255E2313430DD73 /* Pods_STUDI.framework */; };
 		9EDDD6BCC10E0BFA6D47E8C8 /* Pods_STUDIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */; };
 		A84D2F2EE4A9B1A677A04F10 /* Pods_STUDITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */; };
+		B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601723727AC600911C58 /* usernamechangeViewController.swift */; };
 		B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */; };
 		B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60223715BA500241DAE /* PostViewController.swift */; };
 		B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60C237171C300241DAE /* AnswerViewController.swift */; };
-		FD049A5623711EF10087B29C /* HelpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD049A5523711EF10087B29C /* HelpInfoViewController.swift */; };
 		FD0AA3E123706FDF00776293 /* PostSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */; };
 		FD1556B8236FD20900BD9192 /* PicturePen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1556B7236FD20800BD9192 /* PicturePen.png */; };
 		FD429863236A8AEC007D7469 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD429862236A8AEC007D7469 /* GoogleService-Info.plist */; };
@@ -63,10 +63,10 @@
 		902AB313A48A6886DD7273D8 /* Pods-STUDIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUDIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STUDIUITests/Pods-STUDIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B018601723727AC600911C58 /* usernamechangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usernamechangeViewController.swift; sourceTree = "<group>"; };
 		B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9A60223715BA500241DAE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B0F9A60C237171C300241DAE /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
-		FD049A5523711EF10087B29C /* HelpInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpInfoViewController.swift; sourceTree = "<group>"; };
 		FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSegueViewController.swift; sourceTree = "<group>"; };
 		FD1556B7236FD20800BD9192 /* PicturePen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PicturePen.png; sourceTree = "<group>"; };
 		FD429862236A8AEC007D7469 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -209,6 +209,7 @@
 			children = (
 				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
 				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
+				B018601723727AC600911C58 /* usernamechangeViewController.swift */,
 				FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */,
 				FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */,
 				FD875B9D236F28C800103AA6 /* BeginViewController.swift */,
@@ -307,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */;
+			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -471,6 +472,7 @@
 				FD5C9B06236A7CEE00B6F77B /* SignUpViewController.swift in Sources */,
 				B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */,
 				FDE21321236D3A46005B3B92 /* ProfileViewController.swift in Sources */,
+				B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */,
 				FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */,
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
 				FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */,
@@ -771,7 +773,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */ = {
+		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD5C9B26236A7CF300B6F77B /* Debug */,
