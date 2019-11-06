@@ -11,6 +11,7 @@
 		9EDDD6BCC10E0BFA6D47E8C8 /* Pods_STUDIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */; };
 		A84D2F2EE4A9B1A677A04F10 /* Pods_STUDITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */; };
 		B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601723727AC600911C58 /* usernamechangeViewController.swift */; };
+		B018601A23727E0C00911C58 /* answerspostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601923727E0C00911C58 /* answerspostViewController.swift */; };
 		B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */; };
 		B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60223715BA500241DAE /* PostViewController.swift */; };
 		B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60C237171C300241DAE /* AnswerViewController.swift */; };
@@ -64,6 +65,7 @@
 		9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B018601723727AC600911C58 /* usernamechangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usernamechangeViewController.swift; sourceTree = "<group>"; };
+		B018601923727E0C00911C58 /* answerspostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerspostViewController.swift; sourceTree = "<group>"; };
 		B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9A60223715BA500241DAE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B0F9A60C237171C300241DAE /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
 				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
 				B018601723727AC600911C58 /* usernamechangeViewController.swift */,
+				B018601923727E0C00911C58 /* answerspostViewController.swift */,
 				FDE268E4237022D000D36EB0 /* HelpTableViewCell.swift */,
 				FD0AA3E023706FDF00776293 /* PostSegueViewController.swift */,
 				FD875B9D236F28C800103AA6 /* BeginViewController.swift */,
@@ -467,6 +470,7 @@
 			files = (
 				FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */,
 				FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */,
+				B018601A23727E0C00911C58 /* answerspostViewController.swift in Sources */,
 				FDE21325236D3A9F005B3B92 /* HelpViewController.swift in Sources */,
 				FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */,
 				FD5C9B06236A7CEE00B6F77B /* SignUpViewController.swift in Sources */,
