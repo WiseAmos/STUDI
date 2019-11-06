@@ -13,11 +13,18 @@ class usernamechangeViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-   UserDefaults.standard.set(username.text, forKey: "name")
         // Do any additional setup after loading the view.
     }
   
 
+    @IBAction func change(_ sender: Any) {
+        
+        
+          UserDefaults.standard.set(username.text, forKey: "name")
+        
+        
+        
+    }
     /*
     // MARK: - Navigation
 
