@@ -12,6 +12,8 @@
 		A84D2F2EE4A9B1A677A04F10 /* Pods_STUDITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBE83D2E1C5EF2B6EA1D7BE /* Pods_STUDITests.framework */; };
 		B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601723727AC600911C58 /* usernamechangeViewController.swift */; };
 		B018601A23727E0C00911C58 /* answerspostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601923727E0C00911C58 /* answerspostViewController.swift */; };
+		B018601E2372C1DA00911C58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601D2372C1DA00911C58 /* ProfileViewController.swift */; };
+		B01860202372C28200911C58 /* sturct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601F2372C28200911C58 /* sturct.swift */; };
 		B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */; };
 		B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60223715BA500241DAE /* PostViewController.swift */; };
 		B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60C237171C300241DAE /* AnswerViewController.swift */; };
@@ -29,7 +31,6 @@
 		FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A07AF236F3C6100E5E778 /* Utilities.swift */; };
 		FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875B9D236F28C800103AA6 /* BeginViewController.swift */; };
 		FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875BA1236F296300103AA6 /* LoginViewController.swift */; };
-		FD8ACC432372B7110046C84A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8ACC422372B7110046C84A /* ProfileViewController.swift */; };
 		FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */; };
 		FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */; };
 		FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */; };
@@ -66,6 +67,8 @@
 		A315ECCCCC05B9E58C195FFA /* Pods_STUDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B018601723727AC600911C58 /* usernamechangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usernamechangeViewController.swift; sourceTree = "<group>"; };
 		B018601923727E0C00911C58 /* answerspostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerspostViewController.swift; sourceTree = "<group>"; };
+		B018601D2372C1DA00911C58 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B018601F2372C28200911C58 /* sturct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sturct.swift; sourceTree = "<group>"; };
 		B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9A60223715BA500241DAE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B0F9A60C237171C300241DAE /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		FD7A07AF236F3C6100E5E778 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FD875B9D236F28C800103AA6 /* BeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginViewController.swift; sourceTree = "<group>"; };
 		FD875BA1236F296300103AA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FD8ACC422372B7110046C84A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../../Creative Cloud Files/ProfileViewController.swift"; sourceTree = "<group>"; };
 		FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHelpViewController.swift; sourceTree = "<group>"; };
 		FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -208,7 +210,7 @@
 		FD875B9C236F279B00103AA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD8ACC422372B7110046C84A /* ProfileViewController.swift */,
+				B018601D2372C1DA00911C58 /* ProfileViewController.swift */,
 				B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */,
 				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
 				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
@@ -223,6 +225,7 @@
 				FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */,
 				B0F9A60223715BA500241DAE /* PostViewController.swift */,
 				B0F9A60C237171C300241DAE /* AnswerViewController.swift */,
+				B018601F2372C28200911C58 /* sturct.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -474,14 +477,15 @@
 				FDE21325236D3A9F005B3B92 /* HelpViewController.swift in Sources */,
 				FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */,
 				FD5C9B06236A7CEE00B6F77B /* SignUpViewController.swift in Sources */,
-				FD8ACC432372B7110046C84A /* ProfileViewController.swift in Sources */,
 				B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */,
 				B018601823727AC600911C58 /* usernamechangeViewController.swift in Sources */,
+				B018601E2372C1DA00911C58 /* ProfileViewController.swift in Sources */,
 				FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */,
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
 				FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */,
 				B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */,
 				B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */,
+				B01860202372C28200911C58 /* sturct.swift in Sources */,
 				FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */,
 				FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */,
 				FD5C9B04236A7CEE00B6F77B /* SceneDelegate.swift in Sources */,
