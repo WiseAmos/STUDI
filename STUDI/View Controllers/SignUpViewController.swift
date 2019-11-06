@@ -12,6 +12,7 @@ import GoogleSignIn
 
  
    class SignUpViewController: UIViewController {
+  
 
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -72,39 +73,57 @@ import GoogleSignIn
         
         super.viewDidLoad()
     }
+  
+ 
+    
+    
     
     @IBAction func onSignUp(_ sender: Any) {
         
  
-            
-            
-            
-        
-        
-        
-        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
             if (error != nil) {
                 print(error);
             } else {
-                self.performSegue(withIdentifier: "signUpDone", sender: nil)
+                if  self.usernameTextField.text == "" {
+                    var alert = UIAlertController(title: "Alert", message:
+                        "Please fill in your username, thanks", preferredStyle: UIAlertController.Style.alert)
+
+                    self.present(alert, animated: false, completion: nil)
+
+                    alert.addAction(UIAlertAction(title: "Okie", style: UIAlertAction.Style.default,
+                          handler: nil))
+                       // CODE
+                }
+                
+                else{
+                    if self.emailTextField.text == "" {
+                            var alert = UIAlertController(title: "Alert", message:
+                                "Please fill in your email, thanks", preferredStyle: UIAlertController.Style.alert)
+
+                            self.present(alert, animated: false, completion: nil)
+
+                            alert.addAction(UIAlertAction(title: "Okie", style: UIAlertAction.Style.default,
+                                  handler: nil))
+                               // CODE
+                        }
+                    else {
+                        
+                                    print("working")
+                        UserDefaults.standard.set(self.usernameTextField.text, forKey: "name")
+                                            self.performSegue(withIdentifier: "signUpDone", sender: nil)
+                    }
+
+                    
+               
+            
+                        
+                }
+                    
             }
+        
+        
         }
-        
-        let usernameref = Database.database().reference().child("username").childByAutoId()
-        
-        let userObject = [   "username" : usernameTextField.text as Any,
-        
-        
-        ] as [String:Any]
-        
-        usernameref.setValue (userObject, withCompletionBlock: { error, ref in
-                   if error == nil   {
-                    self.performSegue(withIdentifier: "signUpDone", sender: nil)
-               } else {
-                   //handle the error
-                   }
-           })
             
         
         
@@ -117,5 +136,6 @@ import GoogleSignIn
         
     }
 }
+
 
 

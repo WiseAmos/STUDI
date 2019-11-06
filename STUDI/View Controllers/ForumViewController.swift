@@ -13,6 +13,10 @@ class ForumViewController: UITableViewController {
 
     var ref: DatabaseReference!
     var questions: [String]! = []
+    var namee: [String]! = []
+    
+    
+    @IBOutlet weak var names: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -20,16 +24,29 @@ class ForumViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+               let name = UserDefaults.standard.string(forKey: "name")
  
-      
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var arr2: [Any] = []
         ref = Database.database().reference()
         
-        ref.child("post").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
+            for child in snapshot.children {
+                if let childsnapshot = child as? DataSnapshot,
+                    let dicts = childsnapshot as? [String:Any],
+                    let username = dicts["username"] as? [String:Any]
+                {
+                   print("username")
+                    
+                }
+                else {
+                    print ("notworking")
+                }
+                
+            }
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
             for dic in arr {
@@ -55,7 +72,7 @@ class ForumViewController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return UITableView.automaticDimension
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +91,16 @@ class ForumViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "extraDetail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
+    @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {
+       
+        // Use data from the view controller which initiated the unwind segue
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -110,14 +136,17 @@ class ForumViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! AnswerViewController
+        if segue.identifier == "extraDetail", let indexPath = tableView.indexPathForSelectedRow {
+            dest.Question = questions[indexPath.row]
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
