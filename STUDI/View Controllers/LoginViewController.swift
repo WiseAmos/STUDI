@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var username: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     func setGradientBackground() {
 
@@ -60,7 +61,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        
+        UserDefaults.standard.set(username.text, forKey: "name")
         let email = emailTextField.text!
         let password = passwordTextField.text!
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult,  error in
