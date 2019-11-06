@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -398,7 +398,7 @@
         <!--Profile-->
         <scene sceneID="SQz-fY-RGL">
             <objects>
-                <viewController id="8hz-Rd-amf" sceneMemberID="viewController">
+                <viewController id="8hz-Rd-amf" customClass="ProfileViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LfF-We-PKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,12 +408,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Change your name"/>
+                                <connections>
+                                    <action selector="changeNameButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="teZ-xd-Vjy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19L-ml-TXP">
                                 <rect key="frame" x="0.0" y="285" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Change your password"/>
+                                <connections>
+                                    <action selector="changePasswordButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="T4j-Ks-pRz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Wp-yND">
                                 <rect key="frame" x="-1" y="354" width="414" height="61"/>
@@ -421,6 +427,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
+                                    <action selector="logoutButton:" destination="8hz-Rd-amf" eventType="touchUpInside" id="qjN-f5-Bvm"/>
                                     <segue destination="gdj-iL-gaj" kind="unwind" unwindAction="cancelDatabasing:" id="mm4-P8-Ttm"/>
                                 </connections>
                             </button>
@@ -465,15 +472,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM5-2R-gQk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <segue destination="9nF-GJ-RoD" kind="presentation" identifier="showHelp" id="4Gv-yQ-Xbb"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9nF-GJ-RoD" kind="presentation" identifier="showHelp" id="2WE-5K-3hs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -487,36 +490,62 @@
             </objects>
             <point key="canvasLocation" x="2818.840579710145" y="845.75892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--More Help View Controller-->
         <scene sceneID="JjQ-Da-Ft9">
             <objects>
-                <viewController id="9nF-GJ-RoD" sceneMemberID="viewController">
+                <viewController id="9nF-GJ-RoD" customClass="MoreHelpViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yc6-oU-mJw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-ju-TB9">
-                                <rect key="frame" x="15" y="27" width="70" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-YL-QGc">
+                                <rect key="frame" x="20" y="56" width="374" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Vbv-tE-Jh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-cY-Uq8">
+                                <rect key="frame" x="20" y="125" width="374" height="683"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text"> Answer
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-ju-TB9">
+                                <rect key="frame" x="20" y="20" width="69.5" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Back" image="arrow.left" catalog="system">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="A1M-Cf-pul" kind="unwind" unwindAction="unwindToHelp:" id="uOW-6z-dbx"/>
+                                    <segue destination="A1M-Cf-pul" kind="unwind" unwindAction="unwindToHelpPage:" id="q02-jx-G7G"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-YL-QGc">
-                                <rect key="frame" x="20" y="66" width="374" height="710"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xmc-Bx-giC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cDe-ju-TB9" secondAttribute="trailing" symbolic="YES" id="40C-yn-BqY"/>
+                            <constraint firstItem="cDe-ju-TB9" firstAttribute="top" secondItem="xmc-Bx-giC" secondAttribute="top" constant="20" id="DUx-Uv-eY8"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="top" secondItem="cDe-ju-TB9" secondAttribute="bottom" constant="8" symbolic="YES" id="NMp-M2-dMC"/>
+                            <constraint firstItem="lgd-cY-Uq8" firstAttribute="bottom" secondItem="xmc-Bx-giC" secondAttribute="bottom" id="SEr-SN-5us"/>
+                            <constraint firstItem="cDe-ju-TB9" firstAttribute="leading" secondItem="xmc-Bx-giC" secondAttribute="leading" constant="20" id="Ye1-uD-a2G"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="trailing" secondItem="Yc6-oU-mJw" secondAttribute="trailingMargin" id="lZj-fd-T44"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="trailing" secondItem="lgd-cY-Uq8" secondAttribute="trailing" id="mo2-Zd-Cub"/>
+                            <constraint firstItem="lgd-cY-Uq8" firstAttribute="top" secondItem="0fA-YL-QGc" secondAttribute="bottom" constant="14" id="uEC-np-giB"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="leading" secondItem="lgd-cY-Uq8" secondAttribute="leading" id="vJD-mI-xhK"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="leading" secondItem="cDe-ju-TB9" secondAttribute="leading" id="z9r-nG-xIy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xmc-Bx-giC"/>
                     </view>
+                    <connections>
+                        <outlet property="Answer" destination="lgd-cY-Uq8" id="pSf-Ir-CQ2"/>
+                        <outlet property="Question" destination="0fA-YL-QGc" id="YYd-qO-nw9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmd-fs-5Ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="A1M-Cf-pul" userLabel="Exit" sceneMemberID="exit"/>
@@ -590,6 +619,6 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7aK-P6-2Is"/>
+        <segue reference="xwN-Bo-KCG"/>
     </inferredMetricsTieBreakers>
 </document>

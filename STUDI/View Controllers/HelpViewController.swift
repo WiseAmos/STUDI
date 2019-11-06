@@ -10,51 +10,72 @@ import UIKit
 
 class HelpViewController: UITableViewController {
     
-    let HelpTitles = ["How can I post a question?","How do I find my answered questions?","How can I change my username?","How long does it take for my question to be answered?","How can I answer a question?"]
-    let HelpDescs = ["Go to the forum section, and click the space which is labelled post at the bottom of the screen. You can then type out your question. After you are done, proceed to tap the send button.","Click on the Edit Profile button at the bottom of the functions bar. Here you may change your profile picture and username. Tap the text box where your username is displayed and type your new username.","That depends. If your question is frequently searched or asked, more people will see your question and respond to it.","Answering questions is simple, go to the forum function, and tap the question you want to answer. Afterwards, tap the empty text box to post your answer, you can post on the same question multiple times."]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    
-    }
-
-  
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "Load View") {
-            // Pass data to next view
-        }
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return HelpTitles.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "helpCell", for: indexPath)
-        
-        cell.textLabel?.text = "\(HelpTitles[indexPath.row])"
-        cell.detailTextLabel?.text = "Click for more info"
-        
-        return cell
+      var indexRow = 1
+      let HelpAnswers = ["Go to the forum section, and click the space which is labelled post at the bottom of the screen. You can then type out your question. After you are done, proceed to tap the send button.","Click on the Edit Profile button at the bottom of the functions bar. Here you may change your profile picture and username. Tap the text box where your username is displayed and type your new username.","","That depends. If your question is frequently searched or asked, more people will see your question and respond to it","Answering questions is simple, go to the forum function, and tap the question you want to answer. Afterwards, tap the empty text box to post your answer, you can post on the same question multiple times."]
+    let HelpTitles = ["How can I post a question?","How can I change my username?","How do I find my answered questions?","How long does it take for my question to be answered?","How can I answer a question?"]
+    var indexNumber: Int!
+      var chosenQuestion: String!
+      override func viewDidLoad() {
+          super.viewDidLoad()
+      
       }
+
     
-    
-    @IBAction func unwindToHelp(_ unwindSegue: UIStoryboardSegue) {
-       
-        // Use data from the view controller which initiated the unwind segue
+      // MARK: - Table view data source
+      
+      override func numberOfSections(in tableView: UITableView) -> Int {
+          
+          return 1
+      }
+      
+      
+      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if (segue.identifier == "showHelp") {
+              let dest = segue.destination as! MoreHelpViewController
+              dest.helpAnswers = HelpAnswers 
+              dest.indexNumber = indexRow
+              dest.helpQuestions = HelpTitles 
+          }
+      }
+      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+          
+          return HelpTitles.count
+      }
+
+      
+      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+          let cell = tableView.dequeueReusableCell(withIdentifier: "helpCell", for: indexPath)
+          cell.textLabel?.text = "\(HelpTitles[indexPath.row])"
+        cell.detailTextLabel?.text = ""
+        indexRow = indexPath.row
+        return cell
+        }
+      
+      
+      @IBAction func unwindToHelpPage(_ unwindSegue: UIStoryboardSegue) {
+        
+      }
+      
+      override func tableView(_ theTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          let cell = tableView(theTableView, cellForRowAt: indexPath)
+          chosenQuestion = cell.textLabel?.text
+          performSegue(withIdentifier: "showHelp", sender: (Any).self)
+      }
+
+    func colorForIndex(index: Int) -> UIColor {
+        let itemCount = HelpTitles.count - 1
+        let color = (CGFloat(index) / CGFloat(itemCount)) * 0.6
+        return UIColor(red: 1.0, green: color, blue: 0.0, alpha: 1.0)
+    }
+     
+    func HelpViewController(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+         forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = colorForIndex(index: indexPath.row)
     }
 
-  
+
+
+
 
 
 
