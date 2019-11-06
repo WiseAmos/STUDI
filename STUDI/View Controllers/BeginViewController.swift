@@ -17,8 +17,9 @@ class BeginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     func setGradientBackground() {
-        let colorTop =  UIColor(red: 255.0/255.0, green: 149.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 255.0/255.0, green: 94.0/255.0, blue: 58.0/255.0, alpha: 1.0).cgColor
+        
+        let colorTop =  UIColor(red: 32/255.0, green: 119/255.0, blue: 206/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 23/255.0, green: 171/255.0, blue: 161/255.0, alpha: 1.0).cgColor
 
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
@@ -33,12 +34,13 @@ class BeginViewController: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
         Utilities.styleFilledButton(signUpButton)
-        loginButton.layer.borderWidth = 2
-        loginButton.layer.borderColor = UIColor.black.cgColor
-        loginButton.layer.cornerRadius = 20.0
-        signUpButton.layer.borderWidth = 2
-        signUpButton.layer.borderColor = UIColor.black.cgColor
-        signUpButton.layer.cornerRadius = 20.0
+        loginButton.layer.borderWidth = 7
+        loginButton.layer.borderColor = UIColor.white.cgColor
+        loginButton.layer.cornerRadius = 45.0
+        signUpButton.layer.borderWidth = 7
+        signUpButton.layer.borderColor = UIColor.white.cgColor
+        signUpButton.layer.cornerRadius = 45.0
+        loginButton.tintColor = UIColor.white
         setGradientBackground()
     }
     
