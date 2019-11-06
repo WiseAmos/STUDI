@@ -14,6 +14,9 @@ class ForumViewController: UITableViewController {
     var ref: DatabaseReference!
     var questions: [String]! = []
     var namee: [String]! = []
+     var post : [Any]?
+    
+    
     
     
     @IBOutlet weak var names: UILabel!
@@ -25,7 +28,7 @@ class ForumViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
                let name = UserDefaults.standard.string(forKey: "name")
- 
+    var posted : [Any]?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,6 +37,22 @@ class ForumViewController: UITableViewController {
         
         ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user valueb
+            var tempPosted = [posts]()
+                       if let valueDictionary = snapshot.value as? [AnyHashable:String]
+                                 {
+                                     let username = valueDictionary["username"]
+                                     let text = valueDictionary["text"]
+                                   
+                                    let post = posts(username: "username", text: "text")
+                                     tempPosted.append(post)
+                                    post.text
+                                    
+                                 }
+        
+                       self.posted = tempPosted
+
+        
+        
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
             for dic in arr {
@@ -71,8 +90,10 @@ class ForumViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "forumCell", for: indexPath) as! ForumTableViewCell
+
         
-        cell.label.text = questions[indexPath.row]
+        cell.label.text = text
+    
         // Configure the cell...
 
         return cell

@@ -12,3 +12,4 @@ struct posts {
     var username : String
     var text : String
 }
+
