@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="1915.9420289855075" y="-1221.4285714285713"/>
         </scene>
-        <!--Anwers-->
+        <!--Answers-->
         <scene sceneID="9Eh-8P-TxR">
             <objects>
                 <tableViewController id="8zu-q5-8CY" customClass="AnswerViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
@@ -355,8 +355,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Anwers" id="caU-vB-CQq">
+                    <navigationItem key="navigationItem" title="Answers" id="caU-vB-CQq">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="pu6-Xe-cgC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="7Hz-QT-8DZ" kind="presentation" id="A2U-UZ-mwg"/>
                             </connections>
@@ -510,7 +511,7 @@
             </objects>
             <point key="canvasLocation" x="4598.5507246376819" y="129.91071428571428"/>
         </scene>
-        <!--Help View Controller-->
+        <!--Help-->
         <scene sceneID="heF-C3-Fq8">
             <objects>
                 <tableViewController id="E9a-y0-cnM" customClass="HelpViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
@@ -552,7 +553,7 @@
                             <outlet property="delegate" destination="E9a-y0-cnM" id="dFJ-Qn-a7Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ot2-Pg-H4o"/>
+                    <navigationItem key="navigationItem" title="Help" id="Ot2-Pg-H4o"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdz-tQ-ID7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
