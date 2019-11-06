@@ -399,7 +399,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Vbv-tE-Jh6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-cY-Uq8">
@@ -495,6 +495,6 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sCE-M7-u8F"/>
+        <segue reference="xwN-Bo-KCG"/>
     </inferredMetricsTieBreakers>
 </document>

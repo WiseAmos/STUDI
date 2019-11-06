@@ -62,7 +62,16 @@ class HelpViewController: UITableViewController {
           performSegue(withIdentifier: "showHelp", sender: (Any).self)
       }
 
-    
+    func colorForIndex(index: Int) -> UIColor {
+        let itemCount = HelpTitles.count - 1
+        let color = (CGFloat(index) / CGFloat(itemCount)) * 0.6
+        return UIColor(red: 1.0, green: color, blue: 0.0, alpha: 1.0)
+    }
+     
+    func HelpViewController(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+         forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = colorForIndex(index: indexPath.row)
+    }
 
 
 
