@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +51,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zYY-UY-weY">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="mng-oX-gSu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="ysR-Ga-Q5O" kind="unwind" unwindAction="cancelDatabasing:" id="9zb-4a-twy"/>
                             </connections>
@@ -61,7 +62,7 @@
                         <outlet property="emailTextField" destination="x2I-bx-XMS" id="WLt-an-IXD"/>
                         <outlet property="loginButton" destination="0WC-jG-TrK" id="vCQ-5l-wCX"/>
                         <outlet property="passwordTextField" destination="Prs-LO-mWH" id="azJ-P2-Cv2"/>
-                        <outlet property="username" destination="36P-bT-Ew3" id="oD4-gS-wRE"/>
+                        <outlet property="usernameTextField" destination="36P-bT-Ew3" id="oD4-gS-wRE"/>
                         <segue destination="D2k-pL-swa" kind="presentation" identifier="Logindone" modalPresentationStyle="overFullScreen" id="7aK-P6-2Is"/>
                     </connections>
                 </viewController>
@@ -78,39 +79,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To Studi!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVq-Dj-PNs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To Studi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVq-Dj-PNs">
                                 <rect key="frame" x="40" y="14" width="334" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PicturePen.png" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-BV-hv9">
-                                <rect key="frame" x="-1" y="174" width="415" height="301"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8K-sq-ohp">
-                                <rect key="frame" x="52" y="685" width="311" height="73"/>
+                                <rect key="frame" x="20" y="685" width="374" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="ZZs-Jc-6Z5" kind="presentation" modalPresentationStyle="fullScreen" id="r10-zb-ZfY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHP-t3-7ZQ">
-                                <rect key="frame" x="52" y="562" width="311" height="73"/>
+                                <rect key="frame" x="20" y="562" width="374" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ma9-ty-7Ny" kind="presentation" modalPresentationStyle="fullScreen" id="BC7-nZ-PCc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ARB-Yp-lI3"/>
                     </view>
                     <navigationItem key="navigationItem" id="yfg-ar-m68"/>
@@ -121,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZV-BB-1hg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="130"/>
+            <point key="canvasLocation" x="671.01449275362324" y="129.91071428571428"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -173,7 +172,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ae3-hi-ASJ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="AaW-uL-6iP">
-                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="B4n-LP-vn9" kind="unwind" unwindAction="cancelDatabasing:" id="2ct-Eq-P7r"/>
                             </connections>
@@ -183,7 +182,7 @@
                         <outlet property="emailTextField" destination="V7S-AN-LD6" id="Gm5-OK-UFj"/>
                         <outlet property="passwordTextField" destination="Pqx-be-h2h" id="TTa-IX-byt"/>
                         <outlet property="signUpButton" destination="Bh2-cG-hwh" id="yng-hi-Ycf"/>
-                        <outlet property="usernameTextField" destination="MZ6-Fq-rHD" id="W8n-8b-SCG"/>
+                        <outlet property="usernameTextField" destination="MZ6-Fq-rHD" id="Z3R-0D-gCH"/>
                         <segue destination="D2k-pL-swa" kind="presentation" identifier="signUpDone" modalPresentationStyle="fullScreen" id="xwN-Bo-KCG"/>
                     </connections>
                 </viewController>
@@ -375,9 +374,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="OXl-VK-mCf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <state key="normal" title="Post">
-                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="post:" destination="L8M-XZ-sXD" eventType="touchUpInside" id="b98-Wh-5ay"/>
@@ -630,7 +629,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P3o-Pv-e5h">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.82173848149999995" green="0.42704448099999998" blue="0.7062389255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -668,7 +667,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Fv-3u-dWb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.82173848149999995" green="0.42704448099999998" blue="0.7062389255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -681,7 +680,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PicturePen.png" width="280" height="227"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="person" catalog="system" width="64" height="58"/>
@@ -690,6 +688,6 @@
         <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7aK-P6-2Is"/>
+        <segue reference="xwN-Bo-KCG"/>
     </inferredMetricsTieBreakers>
 </document>
