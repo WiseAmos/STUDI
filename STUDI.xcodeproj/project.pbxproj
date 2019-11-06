@@ -177,7 +177,6 @@
 				FD5C9B03236A7CEE00B6F77B /* SceneDelegate.swift */,
 				FD7A07AF236F3C6100E5E778 /* Utilities.swift */,
 				FD5C9B07236A7CEE00B6F77B /* Main.storyboard */,
-				B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */,
 				FD875B9C236F279B00103AA6 /* View Controllers */,
 				FD429862236A8AEC007D7469 /* GoogleService-Info.plist */,
 				FD5C9B0A236A7CF300B6F77B /* Assets.xcassets */,
@@ -209,6 +208,7 @@
 		FD875B9C236F279B00103AA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */,
 				FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */,
 				FDE21324236D3A9F005B3B92 /* HelpViewController.swift */,
 				B018601723727AC600911C58 /* usernamechangeViewController.swift */,
@@ -311,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */;
+			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -777,7 +777,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */ = {
+		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD5C9B26236A7CF300B6F77B /* Debug */,
