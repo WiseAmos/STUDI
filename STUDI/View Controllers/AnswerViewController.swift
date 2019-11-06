@@ -16,14 +16,14 @@ class AnswerViewController: UITableViewController {
         super.viewDidLoad()
 
         answerlabel.text = Question
-        
-        
-    
-        
+
         
         
         // Do any additional setup after loading the view.
     }
+    
+    
+
     
 
     /*

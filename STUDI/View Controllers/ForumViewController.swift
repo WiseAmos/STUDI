@@ -13,7 +13,10 @@ class ForumViewController: UITableViewController {
 
     var ref: DatabaseReference!
     var questions: [String]! = []
+    var namee: [String]! = []
     
+    
+    @IBOutlet weak var names: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -21,16 +24,29 @@ class ForumViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+               let name = UserDefaults.standard.string(forKey: "name")
  
-      
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var arr2: [Any] = []
         ref = Database.database().reference()
         
-        ref.child("post").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
+            for child in snapshot.children {
+                if let childsnapshot = child as? DataSnapshot,
+                    let dicts = childsnapshot as? [String:Any],
+                    let username = dicts["username"] as? [String:Any]
+                {
+                   print("username")
+                    
+                }
+                else {
+                    print ("notworking")
+                }
+                
+            }
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
             for dic in arr {
