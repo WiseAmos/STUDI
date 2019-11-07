@@ -10,7 +10,23 @@ import UIKit
 import Firebase
 
 class answerspostViewController: UIViewController {
+    func setGradientBackground() {
+                     
+                     let colorTop =  UIColor(red: 210/255.0, green: 109/255.0, blue: 180/255.0, alpha: 1.0).cgColor
+                     let colorBottom = UIColor(red: 55/255.0, green: 148/255.0, blue: 228/255.0, alpha: 1.0).cgColor
 
+                     let gradientLayer = CAGradientLayer()
+                     gradientLayer.colors = [colorTop, colorBottom]
+                     gradientLayer.locations = [0.0, 1.0]
+                     gradientLayer.frame = self.view.bounds
+
+                     self.view.layer.insertSublayer(gradientLayer, at:0)
+                 }
+    
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBAction func hideButton(_ sender: Any) {
+        answerLabel.isHidden = true
+    }
     @IBOutlet weak var Answers: UITextView!
     @IBOutlet weak var done: UIButton!
     
@@ -18,7 +34,8 @@ class answerspostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setGradientBackground()
+        Answers.layer.cornerRadius = 45
         // Do any additional setup after loading the view.
     }
     

@@ -32,6 +32,7 @@
 		FD7A07B0236F3C6100E5E778 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7A07AF236F3C6100E5E778 /* Utilities.swift */; };
 		FD875B9E236F28C800103AA6 /* BeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875B9D236F28C800103AA6 /* BeginViewController.swift */; };
 		FD875BA2236F296300103AA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD875BA1236F296300103AA6 /* LoginViewController.swift */; };
+		FDBE4E712373C4DD000C5E2C /* WhitePen.png in Resources */ = {isa = PBXBuildFile; fileRef = FDBE4E702373C4DD000C5E2C /* WhitePen.png */; };
 		FDDCD31A2371655800C2F669 /* MoreHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */; };
 		FDE2131F236D3A1A005B3B92 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */; };
 		FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */; };
@@ -94,6 +95,7 @@
 		FD7A07AF236F3C6100E5E778 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FD875B9D236F28C800103AA6 /* BeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginViewController.swift; sourceTree = "<group>"; };
 		FD875BA1236F296300103AA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDBE4E702373C4DD000C5E2C /* WhitePen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhitePen.png; sourceTree = "<group>"; };
 		FDDCD3192371655800C2F669 /* MoreHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHelpViewController.swift; sourceTree = "<group>"; };
 		FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		FDE21322236D3A74005B3B92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				FD429862236A8AEC007D7469 /* GoogleService-Info.plist */,
 				FD5C9B0A236A7CF300B6F77B /* Assets.xcassets */,
 				FD1556B7236FD20800BD9192 /* PicturePen.png */,
+				FDBE4E702373C4DD000C5E2C /* WhitePen.png */,
 				FD5C9B0C236A7CF300B6F77B /* LaunchScreen.storyboard */,
 				FD5C9B0F236A7CF300B6F77B /* Info.plist */,
 			);
@@ -317,7 +320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */;
+			buildConfigurationList = FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5C9B0E236A7CF300B6F77B /* LaunchScreen.storyboard in Resources */,
+				FDBE4E712373C4DD000C5E2C /* WhitePen.png in Resources */,
 				FD1556B8236FD20900BD9192 /* PicturePen.png in Resources */,
 				FD429863236A8AEC007D7469 /* GoogleService-Info.plist in Resources */,
 				FD5C9B0B236A7CF300B6F77B /* Assets.xcassets in Resources */,
@@ -785,7 +789,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "Studi" */ = {
+		FD5C9AF9236A7CEE00B6F77B /* Build configuration list for PBXProject "STUDI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD5C9B26236A7CF300B6F77B /* Debug */,
