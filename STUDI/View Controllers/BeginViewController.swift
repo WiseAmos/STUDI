@@ -21,7 +21,7 @@ class BeginViewController: UIViewController {
            
            let colorTop =  UIColor(red: 210/255.0, green: 109/255.0, blue: 180/255.0, alpha: 1.0).cgColor
            let colorBottom = UIColor(red: 55/255.0, green: 148/255.0, blue: 228/255.0, alpha: 1.0).cgColor
-
+        
            let gradientLayer = CAGradientLayer()
            gradientLayer.colors = [colorTop, colorBottom]
            gradientLayer.locations = [0.0, 1.0]
@@ -46,16 +46,16 @@ class BeginViewController: UIViewController {
            signUpButton.tintColor = UIColor.white
            setGradientBackground()
        }
-       
-       override func viewDidAppear(_ animated: Bool) {
-           self.handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-               // Code
-           }
-       }
-       
-       override func viewDidDisappear(_ animated: Bool) {
-           Auth.auth().removeStateDidChangeListener(self.handle!)
-       }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            // Code
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(self.handle!)
+    }
 
        @IBAction func cancelDatabasing(_ unwindSegue: UIStoryboardSegue) {
            // Use data from the view controller which initiated the unwind segue
