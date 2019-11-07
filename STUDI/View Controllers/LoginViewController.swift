@@ -80,6 +80,7 @@ class LoginViewController: UIViewController {
         }
         
         @IBAction func loginButtonPressed(_ sender: Any) {
+            
             UserDefaults.standard.set(usernameTextField.text, forKey: "name")
             let email = emailTextField.text!
             let password = passwordTextField.text!

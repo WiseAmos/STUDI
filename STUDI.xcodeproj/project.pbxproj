@@ -14,6 +14,7 @@
 		B018601A23727E0C00911C58 /* answerspostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601923727E0C00911C58 /* answerspostViewController.swift */; };
 		B018601E2372C1DA00911C58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601D2372C1DA00911C58 /* ProfileViewController.swift */; };
 		B01860202372C28200911C58 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B018601F2372C28200911C58 /* Post.swift */; };
+		B01B265D2373B9FC00F1B37F /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B265C2373B9FC00F1B37F /* AnswersTableViewCell.swift */; };
 		B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */; };
 		B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60223715BA500241DAE /* PostViewController.swift */; };
 		B0F9A60D237171C300241DAE /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9A60C237171C300241DAE /* AnswerViewController.swift */; };
@@ -69,6 +70,7 @@
 		B018601923727E0C00911C58 /* answerspostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerspostViewController.swift; sourceTree = "<group>"; };
 		B018601D2372C1DA00911C58 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B018601F2372C28200911C58 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B01B265C2373B9FC00F1B37F /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
 		B01ECFAB23713E6E00E81803 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9A60223715BA500241DAE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B0F9A60C237171C300241DAE /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				FDE2131E236D3A1A005B3B92 /* ForumViewController.swift */,
 				B0F9A60223715BA500241DAE /* PostViewController.swift */,
 				B0F9A60C237171C300241DAE /* AnswerViewController.swift */,
+				B01B265C2373B9FC00F1B37F /* AnswersTableViewCell.swift */,
 				B018601F2372C28200911C58 /* Post.swift */,
 			);
 			path = "View Controllers";
@@ -482,6 +485,7 @@
 				B018601E2372C1DA00911C58 /* ProfileViewController.swift in Sources */,
 				FDE21323236D3A74005B3B92 /* NotificationsViewController.swift in Sources */,
 				FDE268E5237022D000D36EB0 /* HelpTableViewCell.swift in Sources */,
+				B01B265D2373B9FC00F1B37F /* AnswersTableViewCell.swift in Sources */,
 				FD5C9B02236A7CEE00B6F77B /* AppDelegate.swift in Sources */,
 				B0F9A60323715BA500241DAE /* PostViewController.swift in Sources */,
 				B01ECFAC23713E6E00E81803 /* ForumTableViewCell.swift in Sources */,
@@ -669,7 +673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.STUDI;
+				PRODUCT_BUNDLE_IDENTIFIER = "amos-studi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.STUDI;
+				PRODUCT_BUNDLE_IDENTIFIER = "amos-studi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

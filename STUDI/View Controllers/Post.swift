@@ -14,6 +14,7 @@ struct Answer {
 }
 
 struct Post {
+    var uuid: String
     var username : String
     var text : String
     

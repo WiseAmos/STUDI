@@ -30,20 +30,22 @@ class ForumViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         ref = Database.database().reference()
-        ref.child("post").observeSingleEvent(of: .value, with: { (snapshot) in
+        
+        ref.child("post").observe(.value, with: { (snapshot) in
             // Get user valueb
-
-            let value = snapshot.value as? NSDictionary
-            let arr = value!.allValues
+            self.posts.removeAll()
             
-            for dic in arr {
-                let dict = dic as! NSDictionary
+            let dic = snapshot.value as? NSDictionary ?? [:]
+            
+            for item in dic {
+                let dict = item.value as! NSDictionary
                 
+                let id = item.key as? String ?? ""
                 let username = dict["username"] as? String ?? ""
                 let text = dict["text"] as? String ?? ""
-                let answers = dict["answers"] as! [NSDictionary]
+                let answers = dict["answers"] as? [NSDictionary] ?? []
                 
-                var post = Post(username: username, text: text, answers: [])
+                var post = Post(uuid: id, username: username, text: text, answers: [])
                 
                 for answer in answers {
                     let username = answer["username"] as? String ?? ""
