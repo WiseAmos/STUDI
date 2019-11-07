@@ -44,7 +44,7 @@ class answerspostViewController: UIViewController {
         let ref = Database.database().reference().child("post").child(post.uuid).child("answers").observeSingleEvent(of: .value, with: { snapshot in
             let answerArray = snapshot.value;
 //           answerArray?[0].text = Answers.text;
-//            answerArray?[0].username = "post.username"
+ //           answerArray?[0].username = "post.username"
         })
         
         
