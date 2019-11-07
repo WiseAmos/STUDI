@@ -11,15 +11,12 @@ import UIKit
 class AnswerViewController: UITableViewController {
     @IBOutlet weak var answerlabel: UILabel!
     
-    var Question: String!
+    var post: Post!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        answerlabel.text = Question
-
-        
-        
-        // Do any additional setup after loading the view.
+        answerlabel.text = post.text
     }
     
     

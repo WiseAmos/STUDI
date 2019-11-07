@@ -8,8 +8,15 @@
 
 import Foundation
 
-struct posts {
+struct Answer {
     var username : String
     var text : String
+}
+
+struct Post {
+    var username : String
+    var text : String
+    
+    var answers: [Answer]
 }
 

@@ -12,13 +12,11 @@ import FirebaseDatabase
 class ForumViewController: UITableViewController {
 
     var ref: DatabaseReference!
-    var questions: [String]! = []
     var namee: [String]! = []
-     var post : [Any]?
-    
-    
-    
-    
+  
+    let name = UserDefaults.standard.string(forKey: "name")
+    var posts : [Post] = []
+
     @IBOutlet weak var names: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,49 +25,41 @@ class ForumViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-               let name = UserDefaults.standard.string(forKey: "name")
-    var posted : [Any]?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var arr2: [Any] = []
+        
         ref = Database.database().reference()
-        
-        ref.child( "post").observeSingleEvent(of: .value, with: { (snapshot) in
-          // Get user valueb
-            var tempPosted = [posts]()
-                       if let valueDictionary = snapshot.value as? [AnyHashable:String]
-                                 {
-                                     let username = valueDictionary["username"]
-                                     let text = valueDictionary["text"]
-                                   
-                                    let post = posts(username: "username", text: "text")
-                                     tempPosted.append(post)
-                                    post.text
-                                    
-                                 }
-        
-                       self.posted = tempPosted
+        ref.child("post").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user valueb
 
-        
-        
             let value = snapshot.value as? NSDictionary
             let arr = value!.allValues
+            
             for dic in arr {
                 let dict = dic as! NSDictionary
-                arr2.append((dict.allValues[0] as! String))
+                
+                let username = dict["username"] as? String ?? ""
+                let text = dict["text"] as? String ?? ""
+                let answers = dict["answers"] as! [NSDictionary]
+                
+                var post = Post(username: username, text: text, answers: [])
+                
+                for answer in answers {
+                    let username = answer["username"] as? String ?? ""
+                    let text = answer["text"] as? String ?? ""
+                    post.answers.append(Answer(username: username, text: text))
+                }
+                
+//                print("\(username) : \(text)")
+                self.posts.append(post)
+                
             }
-            print("Fetched")
-            print(arr2)
-            self.questions! = arr2 as! [String]
+            
             self.tableView.reloadData()
-          }) { (error) in
-            
+        }) { (error) in
             print(error.localizedDescription)
-            
         }
-
-        
     }
     // MARK: - Table view data source
 
@@ -77,6 +67,7 @@ class ForumViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -84,24 +75,27 @@ class ForumViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return questions.count
+        return posts.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "forumCell", for: indexPath) as! ForumTableViewCell
 
-        
-        cell.label.text = text
-    
-        // Configure the cell...
-
-        return cell
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "extraDetail", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "forumCell", for: indexPath) as! ForumTableViewCell
+     
+        // Configure the cell...
+
+        let post = posts[indexPath.row]
+        
+        cell.label.text = post.text
+        cell.nameLabel.text = post.username
+
+        return cell
     }
 
     @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {
@@ -150,7 +144,7 @@ class ForumViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! AnswerViewController
         if segue.identifier == "extraDetail", let indexPath = tableView.indexPathForSelectedRow {
-            dest.Question = questions[indexPath.row]
+            dest.post = posts[indexPath.row] 
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
