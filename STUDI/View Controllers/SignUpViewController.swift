@@ -25,6 +25,9 @@ import GoogleSignIn
     @IBOutlet weak var errorMessage: UILabel!
     
     @IBOutlet weak var confirmField: UITextField!
+    
+    @IBOutlet weak var button: UIButton!
+    
     func setGradientBackground() {
            
            let colorTop =  UIColor(red: 210/255.0, green: 109/255.0, blue: 180/255.0, alpha: 1.0).cgColor
@@ -34,17 +37,22 @@ import GoogleSignIn
            gradientLayer.colors = [colorTop, colorBottom]
            gradientLayer.locations = [0.0, 1.0]
            gradientLayer.frame = self.view.bounds
-
+        
            self.view.layer.insertSublayer(gradientLayer, at:0)
        }
     
     
     
        override func viewDidLoad() {
+        button.layer.cornerRadius = 20
       signUpButton.layer.borderWidth = 4.5
      signUpButton.layer.borderColor = UIColor.white.cgColor
       signUpButton.layer.cornerRadius = 35
-      signUpButton.tintColor = UIColor.white
+        button.layer.backgroundColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0)
+        button.titleLabel!.text = "Privacy Policy"
+        button.layer.borderWidth = 2.5
+        button.layer.borderColor = UIColor.white.cgColor
+    
            
            let bottomLine = CALayer()
         errorMessage.alpha = 0

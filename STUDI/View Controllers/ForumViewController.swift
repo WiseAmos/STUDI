@@ -43,15 +43,21 @@ class ForumViewController: UITableViewController {
                 let id = item.key as? String ?? ""
                 let username = dict["username"] as? String ?? ""
                 let text = dict["text"] as? String ?? ""
-                let answers = dict["answers"] as? [NSDictionary] ?? []
                 
                 var post = Post(uuid: id, username: username, text: text, answers: [])
                 
-                for answer in answers {
-                    let username = answer["username"] as? String ?? ""
-                    let text = answer["text"] as? String ?? ""
-                    post.answers.append(Answer(username: username, text: text))
+                if let answers = dict["answers"] as? NSDictionary {
+                    for dict in answers.allValues {
+                        if let answer = dict as? NSDictionary {
+                            let username = answer["username"] as? String ?? ""
+                            let text = answer["text"] as? String ?? ""
+                            post.answers.append(Answer(username: username, text: text))
+                        }
+                    }
                 }
+                
+                
+                
                 
 //                print("\(username) : \(text)")
                 self.posts.append(post)
@@ -154,3 +160,4 @@ class ForumViewController: UITableViewController {
     }
 
 }
+ 
