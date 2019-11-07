@@ -35,17 +35,30 @@ class answerspostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground()
-        Answers.layer.cornerRadius = 45
+        Answers.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
     @IBAction func doned(_ sender: Any) {
         
-        let ref = Database.database().reference().child("post").child(post.uuid).child("answers").observeSingleEvent(of: .value, with: { snapshot in
-            let answerArray = snapshot.value;
-//           answerArray?[0].text = Answers.text;
- //           answerArray?[0].username = "post.username"
+        let name = UserDefaults.standard.string(forKey: "name")
+        
+        let postRef = Database.database().reference().child("post").child(post.uuid).child("answers").childByAutoId()
+        
+        let postObject = [
+            "text" : Answers.text as Any,
+            "username" : name as Any
+        ] as [String:Any]
+        
+        postRef.setValue (postObject, withCompletionBlock: { error, ref in
+            if error == nil   {
+                self.dismiss(animated: true) {}
+//                self.performSegue(withIdentifier: "posted" , sender: nil)
+            } else {
+            //handle the error
+            }
         })
+        
         
         
         

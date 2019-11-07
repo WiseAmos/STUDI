@@ -25,7 +25,10 @@ class AnswerViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answercell", for: indexPath) as! AnswersTableViewCell
-//        cell.answer.text =
+        cell.answer.text = post.answers[indexPath.row].text
+        cell.username.text = post.answers[indexPath.row].username
+        
+      
       
         
         
