@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OSM-lt-TX5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="WP5-pq-du1" customClass="LoginViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZL9-M7-uOJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-jG-TrK">
-                                <rect key="frame" x="20" y="410" width="335" height="38"/>
+                                <rect key="frame" x="20" y="410" width="374" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,31 +26,32 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36P-bT-Ew3">
-                                <rect key="frame" x="20" y="148" width="335" height="34"/>
+                                <rect key="frame" x="20" y="148" width="374" height="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2I-bx-XMS">
-                                <rect key="frame" x="20" y="232" width="335" height="34"/>
+                                <rect key="frame" x="20" y="232" width="374" height="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-LO-mWH">
-                                <rect key="frame" x="20" y="316" width="335" height="34"/>
+                                <rect key="frame" x="20" y="316" width="374" height="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-hy-lEA">
-                                <rect key="frame" x="20" y="518" width="335" height="21.666666666666629"/>
+                                <rect key="frame" x="20" y="518" width="374" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.69372147319999999" green="0.40352046489999999" blue="0.65851157900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="x2I-bx-XMS" firstAttribute="top" secondItem="36P-bT-Ew3" secondAttribute="bottom" constant="50" id="55n-es-enl"/>
                             <constraint firstItem="Prs-LO-mWH" firstAttribute="centerX" secondItem="ZL9-M7-uOJ" secondAttribute="centerX" id="CET-bN-Nkc"/>
@@ -74,6 +75,9 @@
                             <constraint firstItem="t20-ed-H00" firstAttribute="trailing" secondItem="G8q-hy-lEA" secondAttribute="trailing" constant="20" id="zG1-md-jwS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t20-ed-H00"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="D8z-rw-ZrF" appends="YES" id="JgP-55-0LB"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zYY-UY-weY">
@@ -96,6 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEm-IY-rm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ysR-Ga-Q5O" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="D8z-rw-ZrF"/>
             </objects>
             <point key="canvasLocation" x="2492.753623188406" y="129.91071428571428"/>
         </scene>
@@ -104,11 +109,11 @@
             <objects>
                 <viewController id="OSM-lt-TX5" customClass="BeginViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8j3-VN-zaI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHP-t3-7ZQ">
-                                <rect key="frame" x="26" y="488" width="323" height="73"/>
+                                <rect key="frame" x="26" y="572" width="362" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="WAv-eZ-wM0"/>
                                 </constraints>
@@ -121,7 +126,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8K-sq-ohp">
-                                <rect key="frame" x="26" y="606" width="323" height="73"/>
+                                <rect key="frame" x="26" y="690" width="362" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="T3W-rX-8sS"/>
                                 </constraints>
@@ -134,7 +139,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Studi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVq-Dj-PNs">
-                                <rect key="frame" x="40" y="267" width="295" height="81"/>
+                                <rect key="frame" x="40" y="267" width="334" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="P1F-Cn-rDG"/>
                                 </constraints>
@@ -172,11 +177,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gmail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7S-AN-LD6">
-                                <rect key="frame" x="20" y="167" width="335" height="34"/>
+                                <rect key="frame" x="20" y="167" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="xMm-8F-4fW"/>
                                 </constraints>
@@ -185,7 +190,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-Fq-rHD">
-                                <rect key="frame" x="20" y="103" width="335" height="34"/>
+                                <rect key="frame" x="20" y="103" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nF0-Uh-REd"/>
                                 </constraints>
@@ -194,7 +199,8 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-be-h2h">
-                                <rect key="frame" x="20" y="231" width="335" height="34"/>
+                                <rect key="frame" x="20" y="231" width="374" height="34"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="jeL-qw-T8i"/>
                                 </constraints>
@@ -203,7 +209,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-cG-hwh">
-                                <rect key="frame" x="100" y="429" width="175" height="50"/>
+                                <rect key="frame" x="100" y="513" width="214" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HCs-CR-dp1"/>
                                 </constraints>
@@ -216,7 +222,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqj-T9-Nii">
-                                <rect key="frame" x="39" y="644" width="297" height="134"/>
+                                <rect key="frame" x="39" y="728" width="336" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="67y-64-e3L"/>
                                 </constraints>
@@ -225,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-Gu-HO0">
-                                <rect key="frame" x="100" y="584" width="175" height="30"/>
+                                <rect key="frame" x="100" y="668" width="214" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Privacy Policy">
@@ -236,7 +242,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, you are agreeing to our privacy policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4he-cU-ljy">
-                                <rect key="frame" x="20" y="484" width="335" height="70"/>
+                                <rect key="frame" x="20" y="568" width="374" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Q5h-Hz-V2m"/>
                                 </constraints>
@@ -245,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-1T-WEF">
-                                <rect key="frame" x="20" y="295" width="335" height="34"/>
+                                <rect key="frame" x="20" y="295" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="6GL-TN-B9j"/>
                                 </constraints>
@@ -255,6 +261,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="cbC-Gu-HO0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="6hH-by-bfD"/>
                             <constraint firstItem="Bh2-cG-hwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="7u5-vF-Vbz"/>
@@ -282,6 +289,9 @@
                             <constraint firstItem="dK7-1T-WEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yZr-kv-NiW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BAa-GT-pXT" appends="YES" id="2W2-J6-fel"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ae3-hi-ASJ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="AaW-uL-6iP">
@@ -304,6 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="B4n-LP-vn9" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="BAa-GT-pXT"/>
             </objects>
             <point key="canvasLocation" x="1581.5999999999999" y="846.05911330049264"/>
         </scene>
@@ -312,7 +323,7 @@
             <objects>
                 <viewController id="OIW-qW-YdD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOa-Fu-j6y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gZ9-kx-mqd">
@@ -412,25 +423,25 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <tableViewController id="XuZ-eF-hIY" customClass="ForumViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MHo-Z2-HWH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="forumCell" rowHeight="90" id="c1b-1S-BhG" customClass="ForumTableViewCell" customModule="STUDI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c1b-1S-BhG" id="lMG-zl-Apj">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forum Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-v7-Rz2">
-                                            <rect key="frame" x="20" y="49" width="308" height="21"/>
+                                            <rect key="frame" x="20" y="49" width="343" height="21"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niyas asked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZt-mL-SGP">
-                                            <rect key="frame" x="20" y="20" width="308" height="21"/>
+                                            <rect key="frame" x="20" y="20" width="343" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="jYD-xd-RHU"/>
                                             </constraints>
@@ -474,27 +485,24 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <viewController id="7Hz-QT-8DZ" customClass="answerspostViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6eD-wu-9nS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRL-Pl-QQG">
-                                <rect key="frame" x="20" y="95" width="374" height="713"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRL-Pl-QQG">
+                                <rect key="frame" x="20" y="68.5" width="374" height="739.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyQ-58-O0p">
-                                <rect key="frame" x="20" y="35" width="290" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyQ-58-O0p">
+                                <rect key="frame" x="20" y="35" width="163" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-Kp-8nR">
-                                <rect key="frame" x="318" y="44" width="74" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-Kp-8nR">
+                                <rect key="frame" x="343" y="28" width="51" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -505,6 +513,17 @@ If you have any questions about this Privacy Policy, please contact us:
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l8e-Kp-8nR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cyQ-58-O0p" secondAttribute="trailing" constant="8" symbolic="YES" id="0f9-eg-2zo"/>
+                            <constraint firstItem="uRL-Pl-QQG" firstAttribute="top" secondItem="l8e-Kp-8nR" secondAttribute="bottom" constant="2.5" id="Hfe-sc-YBA"/>
+                            <constraint firstItem="uRL-Pl-QQG" firstAttribute="top" secondItem="cyQ-58-O0p" secondAttribute="bottom" constant="8" id="S3h-YS-6mF"/>
+                            <constraint firstItem="uRL-Pl-QQG" firstAttribute="leading" secondItem="ukx-ic-bcV" secondAttribute="leading" constant="20" id="T1f-GE-SqX"/>
+                            <constraint firstItem="ukx-ic-bcV" firstAttribute="trailing" secondItem="l8e-Kp-8nR" secondAttribute="trailing" constant="20" id="VZ4-KI-3FV"/>
+                            <constraint firstItem="ukx-ic-bcV" firstAttribute="trailing" secondItem="uRL-Pl-QQG" secondAttribute="trailing" constant="20" id="XyR-4h-8Fn"/>
+                            <constraint firstItem="cyQ-58-O0p" firstAttribute="leading" secondItem="ukx-ic-bcV" secondAttribute="leading" constant="20" id="YEq-8v-hxr"/>
+                            <constraint firstItem="uRL-Pl-QQG" firstAttribute="bottom" secondItem="ukx-ic-bcV" secondAttribute="bottom" id="mRb-4V-b3G"/>
+                            <constraint firstItem="cyQ-58-O0p" firstAttribute="top" secondItem="ukx-ic-bcV" secondAttribute="top" constant="35" id="vej-Hz-l2Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ukx-ic-bcV"/>
                     </view>
                     <navigationItem key="navigationItem" id="3el-kM-1mg"/>
@@ -522,7 +541,7 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <viewController id="Fyk-Jm-7aR" customClass="PostSegueViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qvs-zF-CSI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OQa-fG-ZKo"/>
@@ -541,11 +560,11 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <viewController id="L8M-XZ-sXD" customClass="PostViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUX-XY-8Zk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-cb-4ap">
-                                <rect key="frame" x="20" y="640" width="335" height="64"/>
+                                <rect key="frame" x="20" y="724" width="374" height="64"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="OXl-VK-mCf"/>
@@ -559,13 +578,13 @@ If you have any questions about this Privacy Policy, please contact us:
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daT-gz-2sF">
-                                <rect key="frame" x="20" y="40" width="335" height="18"/>
+                                <rect key="frame" x="20" y="40" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What is the density of Aluminium?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tTh-CN-mO7">
-                                <rect key="frame" x="20" y="68" width="335" height="552"/>
+                                <rect key="frame" x="20" y="68" width="374" height="636"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -624,11 +643,11 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <viewController id="NZU-cP-KZy" customClass="ProfileViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWP-iQ-sU6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-oY-Hfq">
-                                <rect key="frame" x="137.66666666666666" y="383.66666666666669" width="100" height="45"/>
+                                <rect key="frame" x="157" y="425.5" width="100" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -638,7 +657,7 @@ If you have any questions about this Privacy Policy, please contact us:
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More features coming soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7F-04-xZQ">
-                                <rect key="frame" x="30" y="478.66666666666669" width="315" height="27.666666666666686"/>
+                                <rect key="frame" x="30" y="520.5" width="354" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -666,26 +685,26 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <tableViewController id="E9a-y0-cnM" customClass="HelpViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T1r-AU-I4o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="helpCell" textLabel="ME6-YX-sbL" detailTextLabel="cc9-Ze-aPk" rowHeight="74" style="IBUITableViewCellStyleSubtitle" id="IJK-dk-HLP" customClass="HelpTableViewCell" customModule="AppAuth">
-                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IJK-dk-HLP" id="Lt7-jz-GoX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ME6-YX-sbL">
-                                            <rect key="frame" x="16.000000000000004" y="17" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="20" y="17" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cc9-Ze-aPk">
-                                            <rect key="frame" x="15.999999999999996" y="40.333333333333329" width="32.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="40.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -714,20 +733,20 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <viewController id="9nF-GJ-RoD" customClass="MoreHelpViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yc6-oU-mJw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-YL-QGc">
-                                <rect key="frame" x="20" y="56" width="394" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-YL-QGc">
+                                <rect key="frame" x="10" y="56" width="404" height="77"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Vbv-tE-Jh6"/>
+                                    <constraint firstAttribute="height" constant="77" id="Vbv-tE-Jh6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-cY-Uq8">
-                                <rect key="frame" x="20" y="125" width="339" height="599"/>
+                                <rect key="frame" x="10" y="125" width="404" height="683"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text"> Answer
 </string>
@@ -735,29 +754,16 @@ If you have any questions about this Privacy Policy, please contact us:
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-ju-TB9">
-                                <rect key="frame" x="20" y="20" width="69.666666666666671" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Back" image="arrow.left" catalog="system">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="A1M-Cf-pul" kind="unwind" unwindAction="unwindToHelpPage:" id="q02-jx-G7G"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xmc-Bx-giC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cDe-ju-TB9" secondAttribute="trailing" symbolic="YES" id="40C-yn-BqY"/>
-                            <constraint firstItem="cDe-ju-TB9" firstAttribute="top" secondItem="xmc-Bx-giC" secondAttribute="top" constant="20" id="DUx-Uv-eY8"/>
-                            <constraint firstItem="0fA-YL-QGc" firstAttribute="top" secondItem="cDe-ju-TB9" secondAttribute="bottom" constant="8" symbolic="YES" id="NMp-M2-dMC"/>
                             <constraint firstItem="lgd-cY-Uq8" firstAttribute="bottom" secondItem="xmc-Bx-giC" secondAttribute="bottom" id="SEr-SN-5us"/>
-                            <constraint firstItem="cDe-ju-TB9" firstAttribute="leading" secondItem="xmc-Bx-giC" secondAttribute="leading" constant="20" id="Ye1-uD-a2G"/>
-                            <constraint firstItem="0fA-YL-QGc" firstAttribute="trailing" secondItem="Yc6-oU-mJw" secondAttribute="trailingMargin" id="lZj-fd-T44"/>
                             <constraint firstItem="0fA-YL-QGc" firstAttribute="trailing" secondItem="lgd-cY-Uq8" secondAttribute="trailing" id="mo2-Zd-Cub"/>
-                            <constraint firstItem="lgd-cY-Uq8" firstAttribute="top" secondItem="0fA-YL-QGc" secondAttribute="bottom" constant="14" id="uEC-np-giB"/>
+                            <constraint firstItem="xmc-Bx-giC" firstAttribute="trailing" secondItem="0fA-YL-QGc" secondAttribute="trailing" id="moC-Dm-db7"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="top" secondItem="xmc-Bx-giC" secondAttribute="top" constant="56" id="u1x-gu-G5X"/>
+                            <constraint firstItem="lgd-cY-Uq8" firstAttribute="top" secondItem="0fA-YL-QGc" secondAttribute="bottom" constant="-8" id="uEC-np-giB"/>
                             <constraint firstItem="0fA-YL-QGc" firstAttribute="leading" secondItem="lgd-cY-Uq8" secondAttribute="leading" id="vJD-mI-xhK"/>
-                            <constraint firstItem="0fA-YL-QGc" firstAttribute="leading" secondItem="cDe-ju-TB9" secondAttribute="leading" id="z9r-nG-xIy"/>
+                            <constraint firstItem="0fA-YL-QGc" firstAttribute="leading" secondItem="xmc-Bx-giC" secondAttribute="leading" constant="10" id="zOQ-4C-dhA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xmc-Bx-giC"/>
                     </view>
@@ -767,9 +773,8 @@ If you have any questions about this Privacy Policy, please contact us:
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmd-fs-5Ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="A1M-Cf-pul" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4460.8695652173919" y="845.75892857142856"/>
+            <point key="canvasLocation" x="4460" y="845.32019704433503"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yqE-PX-tsJ">
@@ -777,7 +782,7 @@ If you have any questions about this Privacy Policy, please contact us:
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ma9-ty-7Ny" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P3o-Pv-e5h">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69372147319999999" green="0.40352046489999999" blue="0.65851157900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -795,11 +800,11 @@ If you have any questions about this Privacy Policy, please contact us:
             <objects>
                 <tableViewController id="NWd-hz-23U" customClass="AnswerViewController" customModule="STUDI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LOL-lZ-431">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DgN-Tg-aOs">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                             <nil key="textColor"/>
@@ -807,14 +812,14 @@ If you have any questions about this Privacy Policy, please contact us:
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="answercell" rowHeight="110" id="y24-pO-2vT" customClass="AnswersTableViewCell" customModule="STUDI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="292" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="292" width="414" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y24-pO-2vT" id="lyD-AE-Htl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8s9-Cn-wd8">
-                                            <rect key="frame" x="20" y="31" width="335" height="21"/>
+                                            <rect key="frame" x="20" y="31" width="374" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="1Nh-MG-q5D"/>
                                             </constraints>
@@ -823,7 +828,7 @@ If you have any questions about this Privacy Policy, please contact us:
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-du-KNi">
-                                            <rect key="frame" x="20" y="60" width="335" height="30"/>
+                                            <rect key="frame" x="20" y="60" width="374" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -873,7 +878,7 @@ If you have any questions about this Privacy Policy, please contact us:
                     <tabBarItem key="tabBarItem" title="Forum" image="book.fill" catalog="system" id="fhM-y3-swu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0HK-UZ-dAL">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69372147319999999" green="0.40352046489999999" blue="0.65851157900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -895,7 +900,7 @@ If you have any questions about this Privacy Policy, please contact us:
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZZs-Jc-6Z5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Fv-3u-dWb">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69372147319999999" green="0.40352046489999999" blue="0.65851157900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -915,7 +920,7 @@ If you have any questions about this Privacy Policy, please contact us:
                     <tabBarItem key="tabBarItem" title="Help" image="questionmark" catalog="system" id="Ga3-gK-sRV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G5y-oJ-FVm">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69372147319999999" green="0.40352046489999999" blue="0.65851157900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -937,14 +942,13 @@ If you have any questions about this Privacy Policy, please contact us:
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="plus.square" catalog="system" width="64" height="56"/>
         <image name="questionmark" catalog="system" width="48" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xwN-Bo-KCG"/>
+        <segue reference="7aK-P6-2Is"/>
         <segue reference="Xcn-EI-kvt"/>
     </inferredMetricsTieBreakers>
 </document>

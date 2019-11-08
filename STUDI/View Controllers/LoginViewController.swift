@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
             
                    
             setGradientBackground()
-            
+             hideKeyboardWhenTappedAround()
             
             super.viewDidLoad()
             
@@ -101,8 +101,7 @@ class LoginViewController: UIViewController {
         }
         
         
-        
-        
+
         /*
          // MARK: - Navigation
          

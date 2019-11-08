@@ -10,6 +10,17 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
  
    class SignUpViewController: UIViewController {
   
@@ -40,7 +51,6 @@ import GoogleSignIn
         
            self.view.layer.insertSublayer(gradientLayer, at:0)
        }
-    
     
     
        override func viewDidLoad() {
@@ -86,7 +96,7 @@ import GoogleSignIn
            
            
            setGradientBackground()
-          
+           hideKeyboardWhenTappedAround()
        
            
       
@@ -142,17 +152,10 @@ import GoogleSignIn
                        
                }
            
+    
+    
+    
            
            }
                
-           
-           
-           
-           
-           
-           
-           
-
-
-
-
+   
