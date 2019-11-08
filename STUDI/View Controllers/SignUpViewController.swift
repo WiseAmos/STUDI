@@ -47,7 +47,7 @@ import GoogleSignIn
         button.layer.cornerRadius = 20
       signUpButton.layer.borderWidth = 4.5
      signUpButton.layer.borderColor = UIColor.white.cgColor
-      signUpButton.layer.cornerRadius = 35
+      signUpButton.layer.cornerRadius = 20
         button.layer.backgroundColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0)
         button.titleLabel!.text = "Privacy Policy"
         button.layer.borderWidth = 2.5
