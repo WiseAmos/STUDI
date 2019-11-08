@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
             
             loginButton.layer.borderWidth = 4.5
             loginButton.layer.borderColor = UIColor.white.cgColor
-            loginButton.layer.cornerRadius = 35
+            loginButton.layer.cornerRadius = 15
             loginButton.tintColor = UIColor.white
             errorMessage.alpha = 0
             errorMessage.text = "e"

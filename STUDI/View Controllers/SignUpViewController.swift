@@ -44,7 +44,7 @@ import GoogleSignIn
     
     
        override func viewDidLoad() {
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 15
       signUpButton.layer.borderWidth = 4.5
      signUpButton.layer.borderColor = UIColor.white.cgColor
       signUpButton.layer.cornerRadius = 20
