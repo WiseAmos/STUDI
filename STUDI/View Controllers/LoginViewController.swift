@@ -37,45 +37,45 @@ class LoginViewController: UIViewController {
 
         override func viewDidLoad() {
             
-            loginButton.layer.borderWidth = 4.5
-            loginButton.layer.borderColor = UIColor.white.cgColor
-            loginButton.layer.cornerRadius = 15
-            loginButton.tintColor = UIColor.white
-            errorMessage.alpha = 0
-            errorMessage.text = "e"
-            
-            
-            
-            let bottomLine = CALayer()
-            
-            bottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height - 2, width: passwordTextField.frame.width, height: 3)
-            bottomLine.backgroundColor = UIColor.white.cgColor
-            passwordTextField.borderStyle = .none
-            passwordTextField.layer.addSublayer(bottomLine)
-            
-           let bottomLine2 = CALayer()
-           
-           bottomLine2.frame = CGRect(x: 0, y: emailTextField.frame.height - 2, width: emailTextField.frame.width, height: 3)
-                    bottomLine2.backgroundColor = UIColor.white.cgColor
-                     emailTextField.borderStyle = .none
-                    emailTextField.layer.addSublayer(bottomLine2)
-            
-            let bottomLine3 = CALayer()
-               
-             bottomLine3.frame = CGRect(x: 0, y: usernameTextField.frame.height - 2, width: usernameTextField.frame.width, height: 3)
-                bottomLine3.backgroundColor = UIColor.white.cgColor
-              usernameTextField.borderStyle = .none
-             usernameTextField.layer.addSublayer(bottomLine3)
-             
-             
-             
-            
-                   
-            setGradientBackground()
-             hideKeyboardWhenTappedAround()
+
             
             super.viewDidLoad()
+             loginButton.layer.borderWidth = 4.5
+             loginButton.layer.borderColor = UIColor.white.cgColor
+            loginButton.layer.cornerRadius = loginButton.frame.height / 2
+             loginButton.tintColor = UIColor.white
+             errorMessage.alpha = 0
+             errorMessage.text = "e"
+             
+             
+             
+             let bottomLine = CALayer()
+             print(passwordTextField.frame.width)
+             bottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height - 2, width: passwordTextField.frame.width - 50, height: 3)
+             bottomLine.backgroundColor = UIColor.white.cgColor
+             passwordTextField.borderStyle = .none
+             passwordTextField.layer.addSublayer(bottomLine)
+             
+            let bottomLine2 = CALayer()
             
+            bottomLine2.frame = CGRect(x: 0, y: emailTextField.frame.height - 2, width: emailTextField.frame.width - 50, height: 3)
+                     bottomLine2.backgroundColor = UIColor.white.cgColor
+                      emailTextField.borderStyle = .none
+                     emailTextField.layer.addSublayer(bottomLine2)
+             
+             let bottomLine3 = CALayer()
+                
+              bottomLine3.frame = CGRect(x: 0, y: usernameTextField.frame.height - 2, width: usernameTextField.frame.width - 50, height: 3)
+                 bottomLine3.backgroundColor = UIColor.white.cgColor
+               usernameTextField.borderStyle = .none
+              usernameTextField.layer.addSublayer(bottomLine3)
+              
+              
+              
+             
+                    
+             setGradientBackground()
+              hideKeyboardWhenTappedAround()
             // Do any additional setup after loading the view.
         }
         

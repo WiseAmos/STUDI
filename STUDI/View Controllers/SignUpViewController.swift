@@ -54,10 +54,10 @@ extension UIViewController {
     
     
        override func viewDidLoad() {
-        button.layer.cornerRadius = 15
-      signUpButton.layer.borderWidth = 4.5
+        button.layer.cornerRadius = button.frame.height / 2
+        signUpButton.layer.borderWidth = 2.5
      signUpButton.layer.borderColor = UIColor.white.cgColor
-      signUpButton.layer.cornerRadius = 20
+        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
         button.layer.backgroundColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 0)
         button.titleLabel!.text = "Privacy Policy"
         button.layer.borderWidth = 2.5
@@ -66,14 +66,14 @@ extension UIViewController {
            
            let bottomLine = CALayer()
         errorMessage.alpha = 0
-           bottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height - 2, width: passwordTextField.frame.width, height: 3)
+           bottomLine.frame = CGRect(x: 0, y: passwordTextField.frame.height - 2, width: passwordTextField.frame.width - 50, height: 3)
            bottomLine.backgroundColor = UIColor.white.cgColor
                passwordTextField.borderStyle = .none
               passwordTextField.layer.addSublayer(bottomLine)
            
            let bottomLine2 = CALayer()
            
-           bottomLine2.frame = CGRect(x: 0, y: emailTextField.frame.height - 2, width: emailTextField.frame.width, height: 3)
+           bottomLine2.frame = CGRect(x: 0, y: emailTextField.frame.height - 2, width: emailTextField.frame.width - 50, height: 3)
                     bottomLine2.backgroundColor = UIColor.white.cgColor
                      emailTextField.borderStyle = .none
                     emailTextField.layer.addSublayer(bottomLine2)
@@ -81,7 +81,7 @@ extension UIViewController {
            
            let bottomLine3 = CALayer()
              
-           bottomLine3.frame = CGRect(x: 0, y: usernameTextField.frame.height - 2, width: usernameTextField.frame.width, height: 3)
+           bottomLine3.frame = CGRect(x: 0, y: usernameTextField.frame.height - 2, width: usernameTextField.frame.width - 50, height: 3)
               bottomLine3.backgroundColor = UIColor.white.cgColor
             usernameTextField.borderStyle = .none
            usernameTextField.layer.addSublayer(bottomLine3)
@@ -89,7 +89,7 @@ extension UIViewController {
         
                   let bottomLine4 = CALayer()
                     
-                  bottomLine4.frame = CGRect(x: 0, y: confirmField.frame.height - 2, width: confirmField.frame.width, height: 3)
+                  bottomLine4.frame = CGRect(x: 0, y: confirmField.frame.height - 2, width: confirmField.frame.width - 50, height: 3)
                      bottomLine4.backgroundColor = UIColor.white.cgColor
                    confirmField.borderStyle = .none
                    confirmField.layer.addSublayer(bottomLine4)

@@ -37,11 +37,11 @@ class BeginViewController: UIViewController {
            
            loginButton.layer.borderWidth = 4.5
            loginButton.layer.borderColor = UIColor.white.cgColor
-           loginButton.layer.cornerRadius = 35
+        loginButton.layer.cornerRadius = loginButton.frame.height / 2
              loginButton.tintColor = UIColor.white
            signUpButton.layer.borderWidth = 4.5
            signUpButton.layer.borderColor = UIColor.white.cgColor
-           signUpButton.layer.cornerRadius = 35
+        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
            loginButton.tintColor = UIColor.white
            signUpButton.tintColor = UIColor.white
            setGradientBackground()
